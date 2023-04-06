@@ -8,3 +8,9 @@ Step #1 - Setup
 > Import styling (css) form tailwind
     > create tailwind config file (define target files in the content array)
     > declare tailwind in the main style.css file
+
+Step #2 - Create Components
+> Create a folder for all components
+> Homepage
+    > ng g c header
+    
