@@ -11,6 +11,13 @@ Step #1 - Setup
 
 Step #2 - Create Components
 > Create a folder for all components
-> Homepage
+> for Menu Bar
     > ng g c header
+> Create a folder for all pages
+    > ng g c home // this is for the home page or the landing page
+    > within app-routing.module.ts, define the route for the home component
+    > within app.component.ts, add <router-outlet> tag to use home component
+    > Create a folder for components within pages
+        > create a new component called products-header
+        > the conent within the home container will be called using their selector tags
     
