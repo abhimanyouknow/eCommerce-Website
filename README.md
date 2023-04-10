@@ -18,6 +18,10 @@ Step #2 - Create Components
     > within app-routing.module.ts, define the route for the home component
     > within app.component.ts, add <router-outlet> tag to use home component
     > Create a folder for components within pages
-        > create a new component called products-header
+        > create a new component called 'products-header'
         > the conent within the home container will be called using their selector tags
+
+--- 57:30 | Next we add filters to the side panel ---
     
+        > create a new component called 'filters'
+        
