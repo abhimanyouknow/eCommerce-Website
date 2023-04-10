@@ -23,5 +23,5 @@ Step #2 - Create Components
 
 --- 57:30 | Next we add filters to the side panel ---
     
-        > create a new component called 'filters'
-        
+        > create a new component called 'filters' - this will be on the side panel to choose categories
+        > create a new component called 'product-box' - this will display the items on the home page
