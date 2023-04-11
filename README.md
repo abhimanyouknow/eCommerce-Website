@@ -25,3 +25,8 @@ Step #2 - Create Components
     
         > create a new component called 'filters' - this will be on the side panel to choose categories
         > create a new component called 'product-box' - this will display the items on the home page
+
+--- 1:26:55 | Next we add checkout page ---
+
+    > create a new component called 'cart' - this will be the cart page
+    > create a new folder called 'models' within the 'app' folder - this will contain definitions for our interfaces
