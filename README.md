@@ -26,7 +26,16 @@ Step #2 - Create Components
         > create a new component called 'filters' - this will be on the side panel to choose categories
         > create a new component called 'product-box' - this will display the items on the home page
 
---- 1:26:55 | Next we add checkout page ---
+--- 1:26:55 | Next we add cart page ---
 
     > create a new component called 'cart' - this will be the cart page
     > create a new folder called 'models' within the 'app' folder - this will contain definitions for our interfaces
+
+--- 1:58:00 | Next we implement the cart logic
+
+    > we start by adding functionality to the cart button on the products, on the home page
+    > we create a folder called 'services' within the 'app' folder
+        > we create the first service called 'cart' within this new folder
+        > this serivces has to be manually imported into the app.module.ts -> within the 'provides' array
+    > next we update the cart icon at the top of the home page to display & update accurate info
+    > in a similar way, we update the cart page

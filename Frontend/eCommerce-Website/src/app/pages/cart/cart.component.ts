@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cart, CartItem } from 'src/app/models/cart.model';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -23,15 +24,38 @@ export class CartComponent implements OnInit {
     'action'
   ];
   
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-      this.dataSource = this.cart.items;
+      this.cartService.cart.subscribe((_cart: Cart) => {
+        this.cart = _cart;
+        this.dataSource = this.cart.items;
+      });
   }
 
-  // function for calculating total price of all items in the cart
+  // method for calculating total price of all items in the cart (it is defined within the 'cart' Service)
   getTotal(items: Array<CartItem>): number {
-    return items.map((item) => item.price * item.quantity).reduce((prev, current) => prev + current, 0);
+    return this.cartService.getTotal(items);
+  }
+
+  // method to clear all items from cart page
+  onClearCart(): void {
+    this.cartService.clearCart();
+  }
+
+  // method to remove a single row of items from cart page
+  onRemoveFromCart(item: CartItem): void{
+    this.cartService.removeFromCart(item);
+  }
+
+  // method for increasing quantity of item that already exists in the cart
+  onAddQuantity(item: CartItem): void {
+    this.cartService.addToCart(item);
+  }
+
+  // method for decreasing quantity of item that already exsist in the cart
+  onRemoveQuantity(item: CartItem): void {
+    this.cartService.removeQuantity(item);
   }
 
 }
